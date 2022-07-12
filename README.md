@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## CRM - Customer Relationship Management
+
+![Image Description](/public/HomepagePreview.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
