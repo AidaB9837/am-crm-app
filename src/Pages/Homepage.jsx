@@ -1,5 +1,9 @@
-import React from "react";
+import { Hero } from "../Containers/Hero"
 
 export function Homepage() {
-    return
+    return(
+        <>
+            <Hero/>
+        </>
+    )
 }
