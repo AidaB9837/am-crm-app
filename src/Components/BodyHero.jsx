@@ -3,12 +3,19 @@ import bookCall from "../Assets/img/bookCall.png";
 import mission from "../Assets/img/mission.png";
 
 export function BodyHero() {
+  const advantages = [
+    {1 :"Tailor-made solutions: choose&customize"},
+    {2: "Discuss a wide range of strategies in business."},
+    {3: "Customer Service Free Chat 7/7"},
+    {4: "Improve your sales, and your business thanks to the best management ever"},
+    {5: "Track everything wherever you are and from any device"}
+]
   const hero = [
     {
       id: 0,
       title: "YOUR CRM OF TRUST",
       subtitle: "Find your dream house here",
-      text: "Find your modern home here. At affordable prices you can get your dream home with luxurious quality. Various types are here. For more information, you can contact our social media accounts and phone numbers.",
+      text: "Find your modern home here.At affordable prices you can get your dream home with luxurious quality. Various types are here. For more information, you can contact our social media accounts and phone numbers.",
       img: HeroImg,
     },
     {
@@ -22,17 +29,10 @@ export function BodyHero() {
       id: 2,
       title: "Why choose us?",
       subtitle: "Advantages",
-      text: [
-        "Tailor-made solutions: choose&customize",
-        "Discuss a wide range of strategies in business.",
-        "Customer Service Free Chat 7/7",
-        "Improve your sales, and your business thanks to the best management ever",
-        "Track everything wherever you are and from any device",
-      ],
+      call: text =() => advantages.map((advantage) => <li>{advantage}</li>),
       img: bookCall,
-    },
-  ];
-
+    }
+  ]
   return (
     <div>
       {hero.map((row) => (
@@ -40,44 +40,59 @@ export function BodyHero() {
           key={row.id}
           className={
             row.id % 2
-              ? "flex justify-center"
-              : "flex flex-row-reverse "
+              ? "w-full py-1.5 flex justify-center"
+              : "w-full py-1.5 flex flex-row-reverse"
           }
         >
           <div
             className={
               row.id % 2
-                ? "flex justify-center items-center md:ml-2 lg:ml-16 lg:w-4/12"
-                : "flex justify-center items-center mr-2 lg:mr-16 lg:w-4/12"
+                ? "flex justify-center basis-1/2 md:shrink-0"
+                : "flex justify-center basis-1/2 md:shrink-0"
             }
           >
             <img
-              src={row.pic}
-              alt="line pic"
-              className="hidden lg:block w-4/5 rounded-md h-5/6"
+              src={row.img}
+              alt="hero img"
+              // stilizza l'immagine:
+              className="px-1.5 w-full lg:block md:w32"
             ></img>
           </div>
           <div
             className={
               row.id % 2
-                ? "flex flex-col justify-center lg:w-8/12 pr-18 lg:pr-20"
-                : "flex flex-col justify-center lg:w-8/12 pl-18 lg:pl-20"
+              // stilizza il div contenente i testi:
+                ? "pr-1.5 flex flex-col basis-1/2 items-end justify-center space-y-9"
+                : "pl-1.5 flex flex-col basis-1/2 items-start justify-center space-y-9"
             }
           >
             <h1
               className={
                 row.id % 2
-                  ? "px-2 md:px-5 md:ml-5 text-2xl font-bold text-violet-800 uppercase text-center lg:text-left"
-                  : "md:px-5 md:ml-8 text-2xl font-bold text-violet-800 uppercase text-center lg:text-left"
+                // stilizza il title:
+                  ? "text-4xl font-bold text-[#292891] uppercase"
+                  : "text-4xl font-bold text-[#292891] uppercase"
               }
             >
               {row.title}
             </h1>
+            <h3
+              className={
+                row.id % 2
+                // stilizza il subtitle:
+                  ? "text-2xl font-bold text-[#292891]"
+                  : "text-2xl font-bold text-[#292891]"
+              }
+            >
+              {row.subtitle}
+
+            </h3>
             <p
               className={
                 row.id % 2
-                  ? "p-5 lg:mr-8 lg:ml-5 text-justify"
-                  : "p-5 lg:ml-8 lg:mr-5 text-justify"
+                // stilizza il text:
+                  ? "text-justify text-[#292891]"
+                  : "text-justify text-[#292891]"
               }
             >
               {row.text}
