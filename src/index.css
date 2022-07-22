@@ -1,5 +1,8 @@
 @import "~tailwindcss/base";
 @import "~tailwindcss/components";
 @import "~tailwindcss/utilities";
+@import "https://fonts.google.com/specimen/Poppins?query=poppins#standard-styles";
 
-*{box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}

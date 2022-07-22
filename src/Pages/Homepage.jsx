@@ -1,9 +1,9 @@
-import { Hero } from "../Containers/Hero"
+import { Hero } from "../Containers/Hero";
 
 export function Homepage() {
-    return(
-        <>
-            <Hero/>
-        </>
-    )
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }
