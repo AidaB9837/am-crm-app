@@ -41,7 +41,7 @@ export function BodyHero() {
     },
   ];
   return (
-    <div className="mx-[10rem] mt-[2rem]">
+    <div>
       {hero.map((row) => (
         <div
           key={row.id}
@@ -51,26 +51,20 @@ export function BodyHero() {
               : "w-full py-1.5 flex flex-row-reverse"
           }
         >
-          <div
-            className={
-              row.id % 2
-                ? "flex justify-center basis-1/2 md:shrink-0"
-                : "flex justify-center basis-1/2 md:shrink-0"
-            }
-          >
+          <div className={"flex justify-center basis-1/2 md:shrink-0"}>
             <img
               src={row.img}
               alt="hero img"
               // stilizza l'immagine:
-              className="px- w-full lg:block md:w32"
+              className="lg:block md:w32"
             ></img>
           </div>
           <div
             className={
               row.id % 2
                 ? // stilizza il div contenente i testi:
-                  "pr-1.5 flex flex-col basis-1/2 items-end justify-center space-y-9"
-                : "pl-1.5 flex flex-col basis-1/2 items-start justify-center space-y-9"
+                  "pr-1.5 flex flex-col basis-1/2 items-end justify-center space-y-9 ml-8"
+                : "pl-1.5 flex flex-col basis-1/2 items-start justify-center space-y-9 mr-8"
             }
           >
             <h1
